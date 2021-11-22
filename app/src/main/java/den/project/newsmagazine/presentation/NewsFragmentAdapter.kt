@@ -1,4 +1,4 @@
-package den.project.newsmagazine.presentation.fragments
+package den.project.newsmagazine.presentation
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,10 +8,10 @@ import den.project.newsmagazine.R
 import den.project.newsmagazine.databinding.NewsFragmentBinding
 import den.project.newsmagazine.model.News
 
-class NewsFragment : RecyclerView.Adapter<NewsFragment.NewsFragmentHolder>() {
+class NewsFragmentAdapter : RecyclerView.Adapter<NewsFragmentAdapter.NewsFragmentHolder>() {
     private val newsList = ArrayList<News>()
 
-    class NewsFragmentHolder(item: View) : RecyclerView.ViewHolder(item) {
+    inner class NewsFragmentHolder(item: View) : RecyclerView.ViewHolder(item) {
         val binding = NewsFragmentBinding.bind(item)
         fun bind(news: News) {
             binding.nameNews.text = news.title
@@ -23,7 +23,7 @@ class NewsFragment : RecyclerView.Adapter<NewsFragment.NewsFragmentHolder>() {
     }
 
     companion object {
-        fun newInstance() = NewsFragment()
+        fun newInstance() = NewsFragmentAdapter()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsFragmentHolder {
