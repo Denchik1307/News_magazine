@@ -1,5 +1,6 @@
 package den.project.newsmagazine.presentation.recycler.filter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +13,7 @@ class FilterAdapter : RecyclerView.Adapter<FilterHolder>() {
         fun newInstance() = FilterAdapter()
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun showFilter(filter: Set<String>) {
         filterList.clear()
         filterList.addAll(filter)
@@ -20,7 +22,7 @@ class FilterAdapter : RecyclerView.Adapter<FilterHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilterHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.news_fragment, parent, false)
+            .inflate(R.layout.filter_fragment, parent, false)
         return FilterHolder(view)
     }
 

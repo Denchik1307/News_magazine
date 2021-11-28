@@ -1,6 +1,7 @@
 package den.project.newsmagazine
 
 import android.os.Bundle
+import android.view.View.VISIBLE
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.collection.arraySetOf
@@ -13,13 +14,14 @@ import den.project.newsmagazine.presentation.recycler.filter.FilterAdapter
 import den.project.newsmagazine.presentation.recycler.news.NewsAdapter
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     private val feedNews: NewsRepository = NewsRepositoryImpl()
-    private var sortedNews = feedNews.getNews()
-    private var shareFilter = arraySetOf<String>()
+    private val sortedNews = feedNews.getNews()
+    private val shareFilter = arraySetOf<String>()
     private val adapterNews = NewsAdapter()
     private val adapterFilter = FilterAdapter.newInstance()
+    private val show = arraySetOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,8 +37,10 @@ class MainActivity : AppCompatActivity() {
             fragmentNewsHolder.layoutManager = LinearLayoutManager(this@MainActivity)
             fragmentNewsHolder.adapter = adapterNews
             adapterNews.showNews(newsData)
-            val show = getFilters(ResourceFilter.AUTHOR, sortedNews)
-            binding.sort.setOnClickListener {
+            sort.setOnClickListener {
+           show.add(ResourceFilter.AUTHOR.toString())
+           show.add(ResourceFilter.DATA.toString())
+           show.add(ResourceFilter.TOPIC.toString())
                 showFilter(show)
                 Toast.makeText(applicationContext, "$show", Toast.LENGTH_SHORT).show()
             }
@@ -47,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             fragmentFilterHolder.layoutManager = LinearLayoutManager(this@MainActivity)
             fragmentFilterHolder.adapter = adapterFilter
+            fragmentFilterHolder.visibility = VISIBLE
             adapterFilter.showFilter(filterData)
         }
     }
@@ -60,26 +65,4 @@ class MainActivity : AppCompatActivity() {
         }
         return shareFilter
     }
-
-    private fun filterAuthor(filter: String) {
-        val news = sortedNews.filter { it.author == filter }
-        showNews(news as ArrayList<NewsData>)
-    }
-
-    private fun filterTheme(filter: String) {
-        val news = sortedNews.filter { it.topic == filter }
-        showNews(news as ArrayList<NewsData>)
-    }
-
-    private fun filterDate(filter: String) {
-        val news = sortedNews.filter { it.data == filter }
-        showNews(news as ArrayList<NewsData>)
-    }
-
-//    private fun initObserver() {
-//        dataModel._newsFilter.observe(this, { liveDataFilter ->
-//            filter = liveDataFilter
-//        })
-//    }
-
 }
