@@ -1,6 +1,6 @@
 package den.project.newsmagazine.model
 
-data class News(
+data class NewsData(
     val title: String,
     val author: String,
     val data: String,

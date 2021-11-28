@@ -1,7 +1,7 @@
 package den.project.newsmagazine.data
 
-import den.project.newsmagazine.model.News
+import den.project.newsmagazine.model.NewsData
 
 interface NewsRepository {
-    fun getNews(): ArrayList<News>
+    fun getNews(): ArrayList<NewsData>
 }

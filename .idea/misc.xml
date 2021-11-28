@@ -3,14 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Denis/AndroidStudioProjects/Newsmagazine/app/src/main/res/drawable/bottom_sheet_background.xml" value="0.2994791666666667" />
         <entry key="..\:/Users/Denis/AndroidStudioProjects/Newsmagazine/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2994791666666667" />
         <entry key="..\:/Users/Denis/AndroidStudioProjects/Newsmagazine/app/src/main/res/drawable/ic_news.xml" value="0.2994791666666667" />
         <entry key="..\:/Users/Denis/AndroidStudioProjects/Newsmagazine/app/src/main/res/layout-v28/activity_main.xml" value="0.18113208199022698" />
-        <entry key="..\:/Users/Denis/AndroidStudioProjects/Newsmagazine/app/src/main/res/layout/activity_main.xml" value="0.33163913595933925" />
+        <entry key="..\:/Users/Denis/AndroidStudioProjects/Newsmagazine/app/src/main/res/layout/activity_main.xml" value="0.2988679352838745" />
         <entry key="..\:/Users/Denis/AndroidStudioProjects/Newsmagazine/app/src/main/res/layout/filter_fragment.xml" value="0.2988679352838745" />
         <entry key="..\:/Users/Denis/AndroidStudioProjects/Newsmagazine/app/src/main/res/layout/filter_select_fragment.xml" value="0.14596273291925466" />
+        <entry key="..\:/Users/Denis/AndroidStudioProjects/Newsmagazine/app/src/main/res/layout/fragment_bottom_shield.xml" value="0.5280269058295964" />
         <entry key="..\:/Users/Denis/AndroidStudioProjects/Newsmagazine/app/src/main/res/layout/fragment_news.xml" value="0.2791666666666667" />
-        <entry key="..\:/Users/Denis/AndroidStudioProjects/Newsmagazine/app/src/main/res/layout/news_fragment.xml" value="0.4528302049755674" />
+        <entry key="..\:/Users/Denis/AndroidStudioProjects/Newsmagazine/app/src/main/res/layout/make_pattern_fragment.xml" value="0.2791666666666667" />
+        <entry key="..\:/Users/Denis/AndroidStudioProjects/Newsmagazine/app/src/main/res/layout/news_fragment.xml" value="0.19924529018924966" />
         <entry key="..\:/Users/Denis/AndroidStudioProjects/Newsmagazine/app/src/main/res/layout/news_fragment2.xml" value="0.1398148148148148" />
         <entry key="..\:/Users/Denis/AndroidStudioProjects/Newsmagazine/app/src/main/res/layout/news_fragment_holder.xml" value="0.16574074074074074" />
         <entry key="..\:/Users/Denis/AndroidStudioProjects/Newsmagazine/app/src/main/res/menu/custom_menu.xml" value="0.2988679352838745" />
